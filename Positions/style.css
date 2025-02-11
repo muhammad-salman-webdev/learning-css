@@ -1,0 +1,57 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    background: grey;
+    margin: 100px;
+    position: relative;
+    top: 300px;
+}
+
+.border-box {
+    border: 3px solid orange;
+    width: 100px;
+    margin: 100px;
+}
+
+.box-1 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    position: static;
+    position: relative;
+    top: 60px;
+    left: 000px;
+}
+
+.box-2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(132, 0, 255);
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.box-3 {
+    width: 800px;
+    height: 100px;
+    background-color: rgb(60, 255, 0);
+    color: white;
+    position: sticky;
+    top: 0px;
+}
+
+.top-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: red;
+    color: white;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
