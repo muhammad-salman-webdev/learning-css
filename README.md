@@ -53,10 +53,6 @@
 - `grid-template-columns`, `grid-template-rows`
 - `gap`, `grid-area`, `grid-template-areas`
 
-### Float & Clear
-- `float: left`, `right`, `none`
-- `clear: both`, `left`, `right`
-
 ---
 
 ## 4. Spacing & Sizing
