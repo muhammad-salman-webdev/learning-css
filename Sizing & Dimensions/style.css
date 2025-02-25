@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 300px;
+    background-color: red;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.container {
+    /* overflow: visible; */
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin: 10px;
+    clip-path: polygon(25% 5%, 70% 0%, 95% 20%, 100% 60%, 75% 95%, 40% 100%, 10% 85%, 0% 40%);
+    clip-path: polygon(75% 0, 0 59%, 54% 100%);
+    clip-path: polygon(50% 0%, 63% 17%, 100% 11%, 100% 100%, 54% 65%, 0 100%, 19% 76%, 0 18%, 24% 39%);
+}
