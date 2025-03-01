@@ -1,0 +1,78 @@
+h1 {
+    /* background: red; */
+}
+
+/* 
+* {
+    background: linear-gradient(red, green, blue);
+} */
+/* h1 {
+    background-color: red;
+    font-size: 40px;
+} */
+.good-student {
+    background-color: aqua;
+    color: pink;
+    font-family: 'System-ui';
+    font-size: 50px;
+}
+
+.needs-atention-student {
+    color: orange;
+    background: black;
+}
+
+#go-to-top {
+    width: 100px;
+    height: 100px;
+    background: purple;
+    color: white;
+    border-radius: 100%;
+    font-size: system-ui;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+html body h1 {
+    background-color: pink;
+}
+
+body h1 {
+    background: green;
+}
+
+h1 {
+    background: red;
+}
+
+h1 {
+    background: #0053ee;
+}
+
+h1 {
+    background: orange !important;
+}
+
+[data-abc] {
+    margin: 100px;
+}
+
+/*  */
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: purple;
+    /* Top, right, bottom, left */
+    /* margin: 100px 10px 150px 50px; */
+    /*  */
+    /* Top, left/right, bottom */
+    /* margin: 100px 10px 150px; */
+    /* Top/bottom, left/right */
+    margin: 100px 50px;
+    /* border-width: 10px;
+    border-style: solid;
+    border-color: black; */
+    border: 10px solid blue;
+    box-sizing: border-box;
+}

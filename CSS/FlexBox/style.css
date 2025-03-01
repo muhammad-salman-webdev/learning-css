@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 1500px;
+    background-color: aqua;
+    column-gap: 20px;
+    row-gap: 20px;
+    /* align-items: center;
+    justify-content: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+}
