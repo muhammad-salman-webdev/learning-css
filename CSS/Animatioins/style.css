@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* perspective: 2000px; */
+}
+
+.container {
+    background-color: red;
+    width: 200px;
+    aspect-ratio: 1/1;
+    transition: all .8s;
+    /* transform-style: preserve-3d; */
+    /* overflow: hidden; */
+    border-radius: 10px;
+    box-shadow: 0 0 5px 10px grey;
+    /* Animation */
+}
+
+img {
+    width: 100%;
+}
+
+.container:hover {
+    /* transform: rotateY(180deg); */
+}
