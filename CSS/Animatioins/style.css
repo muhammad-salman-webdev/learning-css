@@ -4,24 +4,138 @@
     box-sizing: border-box;
 }
 
+@keyframes CustomAnimation {
+    0% {
+        width: 400px;
+        border-radius: 50%;
+        opacity: 1;
+        top: 30%;
+        left: 40%;
+    }
+
+    20% {
+        top: 0;
+        left: 0;
+    }
+
+    40% {
+        width: 600px;
+        border-radius: 100px;
+        opacity: 0.5;
+        top: 10%;
+        left: 10%;
+    }
+
+    60% {
+        width: 50px;
+        border-radius: 50px;
+        top: 20%;
+        left: 20%;
+    }
+
+    80% {
+        transform: rotate(360deg);
+        opacity: 1;
+        top: 25%;
+        left: 25%;
+    }
+
+    100% {
+        width: 400px;
+        border-radius: 50%;
+        opacity: 1;
+        top: 30%;
+        left: 40%;
+    }
+}
+
+@keyframes CustomAnimation2 {
+    0% {
+        width: 400px;
+        border-radius: 50%;
+        opacity: 1;
+        bottom: 30%;
+        right: 40%;
+    }
+
+    20% {
+        bottom: 0;
+        right: 0;
+    }
+
+    40% {
+        width: 600px;
+        border-radius: 100px;
+        opacity: 0.5;
+        bottom: 10%;
+        right: 10%;
+    }
+
+    60% {
+        width: 50px;
+        border-radius: 50px;
+        bottom: 20%;
+        right: 20%;
+    }
+
+    80% {
+        transform: rotate(-360deg);
+        opacity: 1;
+        bottom: 25%;
+        right: 25%;
+    }
+
+    100% {
+        width: 400px;
+        border-radius: 50%;
+        opacity: 1;
+        bottom: 25%;
+        right: 30%;
+    }
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     /* perspective: 2000px; */
+    overflow: hidden;
+    background-color: rgb(8, 5, 5);
 }
 
 .container {
-    background-color: red;
     width: 200px;
     aspect-ratio: 1/1;
     transition: all .8s;
+    position: absolute;
+    margin-left: -230px;
     /* transform-style: preserve-3d; */
-    /* overflow: hidden; */
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 0 5px 10px grey;
     /* Animation */
+    animation-name: CustomAnimation;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+.container.hamza {
+    width: 200px;
+    aspect-ratio: 1/1;
+    transition: all .8s;
+    position: absolute;
+    margin-left: 230px;
+    /* transform-style: preserve-3d; */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 10px grey;
+    /* Animation */
+    animation-name: CustomAnimation2;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
 }
 
 img {
@@ -30,4 +144,41 @@ img {
 
 .container:hover {
     /* transform: rotateY(180deg); */
+}
+
+@keyframes heartAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.heart {
+    opacity: 0;
+    transform: scale(0);
+    width: 150px;
+    position: relative;
+    z-index: 3;
+    margin: 100px 0 0 -80px;
+    animation-name: heartAnimation;
+    animation-duration: .5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+
+    img {
+        width: 100%;
+    }
+}
+
+button {
+    transform: scale(4);
 }

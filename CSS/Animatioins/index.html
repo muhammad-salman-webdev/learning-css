@@ -7,8 +7,25 @@
     <title>Animations</title>
   </head>
   <body>
-    <div class="container">
-      <img src="../Transforms/salman.jpeg" alt="" />
-    </div>
+    <button>Click Me</button>
   </body>
 </html>
+<script>
+  const btn = document.querySelector("button");
+  btn.addEventListener("click", () => {
+    document.body.innerHTML = `
+    <audio id="myAudio" src="song.mp3" autoplay loop playsinline></audio>
+    
+      <div class="container">
+      <img src="../Transforms/salman.jpeg" alt="" />
+    </div>
+    <div class="container hamza">
+      <img src="hamza-2.jpg" alt="" />
+    </div>
+    <div class="heart">
+      <img src="heart.png" alt="" />
+    </div>
+    
+    `;
+  });
+</script>
