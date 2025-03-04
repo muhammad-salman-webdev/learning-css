@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 50px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 20px;
+}
+
+.container {
+    background-color: red;
+    width: 500px;
+    aspect-ratio: 1/1;
+}
+
+.sub-container {
+    font-size: 1.5em;
+}
+
+.parent {
+    font-size: 3rem;
+
+    .child {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        background-color: orange;
+    }
+}
+
+@media (min-width: 500px) {
+    .container {
+        background-color: #00ff40;
+    }
+}
