@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lightbox with Zoom Effect</title>
+    <style>
+      /* Image container and thumbnail styling */
+      .thumbnail {
+        width: 200px;
+        cursor: pointer;
+      }
+
+      /* The lightbox (hidden by default) */
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+        overflow: auto;
+        opacity: 0; /* Start with opacity 0 */
+        transition: opacity 0.5s ease; /* Smooth fade-in transition */
+      }
+
+      /* Lightbox image styling */
+      .lightbox-content {
+        max-width: 80%;
+        max-height: 80%;
+        margin: auto;
+        display: block;
+        transform: scale(0); /* Start with the image scaled down */
+        transition: transform 0.2s ease-in-out; /* Smooth zoom-in effect */
+      }
+
+      /* Close button (X) styling */
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close-btn:hover,
+      .close-btn:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Optional: Add zoom-out effect on lightbox image when it is closed */
+      .lightbox.closing .lightbox-content {
+        transform: scale(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-container">
+      <img id="myImage" src="Image.jpeg" alt="Thumbnail" class="thumbnail" />
+    </div>
+
+    <!-- The Modal (Lightbox) -->
+    <div id="lightbox" class="lightbox">
+      <span id="closeBtn" class="close-btn">&times;</span>
+      <img class="lightbox-content" id="lightboxImage" />
+    </div>
+
+    <script>
+      // Get the elements
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const closeBtn = document.getElementById("closeBtn");
+      const myImage = document.getElementById("myImage");
+
+      // When the image is clicked, open the lightbox with zoom effect
+      myImage.onclick = function () {
+        lightbox.style.display = "flex";
+        lightbox.style.opacity = 1; // Fade in the lightbox
+        lightboxImage.src = this.src; // Set the lightbox image to the clicked image
+        // Optional: Zoom the image as it appears
+        setTimeout(() => {
+          lightboxImage.style.transform = "scale(1)"; // Zoom-in effect
+        }, 10); // Small delay to trigger the transition
+      };
+
+      // When the close button is clicked, add zoom-out effect and close the lightbox
+      closeBtn.onclick = function () {
+        lightbox.classList.add("closing");
+        lightboxImage.style.transform = "scale(0)";
+        lightbox.classList.remove("closing"); // Add 'closing' class for zoom-out effect
+        setTimeout(() => {
+          lightbox.style.display = "none";
+          // Remove 'closing' class after the transition ends
+        }, 500); // Timeout duration matches the transition time (0.5s)
+      };
+    </script>
+  </body>
+</html>
