@@ -1,20 +1,27 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+header {
+  background-color: #fbfaee;
+
+  font-family: myFirstFont;
+}
 .container {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .btn {
-    padding: 12px 20px;
-    border-radius: 4px;
-    background-color: darkblue;
-    color: white;
-    display: block;
-    max-width: max-content;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #263238;
+  color: white;
+  display: block;
+  max-width: max-content;
+
+  text-decoration: none;
 }

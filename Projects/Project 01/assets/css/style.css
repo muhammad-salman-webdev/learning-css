@@ -1,22 +1,27 @@
-@import url('./fonts.css');
-@import url('./basic-needs.css');
+@import url("./fonts.css");
+@import url("./basic-needs.css");
 
 .header-container {
-    display: flex;
-    padding: 12px 0;
-    align-items: center;
+  display: flex;
+  padding: 20px 0;
+  align-items: center;
+  border-bottom: #d1d1d1 1px solid;
 }
 
 .header-nav {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .header-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+  display: flex;
+  list-style: none;
+  gap: 75px;
 }
-
+.header-nav ul li a {
+  text-decoration: none;
+  color: #263238;
+  font-size: 16px;
+}
 .header-right-content {
-    margin-left: 50px;
+  margin-left: 50px;
 }
