@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+:root {
+    --primary-color: aqua;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.item:focus {
+    background-color: orange;
+    outline: 2px solid red;
+}
+
+.item::before {
+    content: 'BEFORE';
+}
+
+.item::after {
+    content: 'Salman';
+    background-color: pink;
+    font-size: 28px;
+    background-color: var(--primary-color);
+}
+
+.item:focus-visible {
+    outline: 2px solid blue;
+    background-color: var(--primary-color);
+}
