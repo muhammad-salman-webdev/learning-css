@@ -15,13 +15,25 @@
 .header-nav ul {
   display: flex;
   list-style: none;
-  gap: 75px;
+  gap: 35px;
 }
+
 .header-nav ul li a {
   text-decoration: none;
   color: #263238;
   font-size: 16px;
 }
+
 .header-right-content {
   margin-left: 50px;
+}
+
+.ham-burger-menu-btn {
+  margin-left: 20px;
+  font-size: 22px;
+  display: none;
+}
+
+.ham-burger-menu-btn input {
+  display: none;
 }

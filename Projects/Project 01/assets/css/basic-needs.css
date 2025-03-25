@@ -6,13 +6,14 @@
 
 header {
   background-color: #fbfaee;
-
   font-family: myFirstFont;
 }
+
 .container {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .btn {
@@ -22,6 +23,5 @@ header {
   color: white;
   display: block;
   max-width: max-content;
-
   text-decoration: none;
 }
