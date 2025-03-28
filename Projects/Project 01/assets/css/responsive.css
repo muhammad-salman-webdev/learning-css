@@ -1,26 +1,6 @@
-@media (max-width: 1024px) {
+@media (max-width:1024px) {
     .header-nav {
-        position: absolute;
-        top: 115px;
-        background: rgb(255, 255, 255);
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         display: none;
-    }
-
-    .header-container:has(input:checked) .header-nav {
-        display: flex;
-    }
-
-    .header-nav ul {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .header-right-content {
@@ -28,6 +8,10 @@
     }
 
     .ham-burger-menu-btn {
+        display: block;
+    }
+
+    .header-container:has(input:checked) .header-nav {
         display: block;
     }
 }

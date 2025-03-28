@@ -28,12 +28,11 @@
   margin-left: 50px;
 }
 
+/* Ham Burger Menu */
 .ham-burger-menu-btn {
-  margin-left: 20px;
-  font-size: 22px;
   display: none;
 }
 
-.ham-burger-menu-btn input {
-  display: none;
+.ham-burger-menu-btn i {
+  font-size: 28px;
 }
